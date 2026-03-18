@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Светлая память - Антоновский Георгий Иванович</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#dcb47d',
+                        darkbg: '#0a0a0c',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* Цвет-заглушка */
+            background-color: #0a0a0c;
+            /* Слоеный фон:
+               1. Сверху накладываем затемнение по краям (радиальный градиент)
+               2. Снизу ваша картинка background.png */
+            background-image: radial-gradient(circle at 50% 30%, rgba(10, 10, 12, 0.4) 0%, rgba(10, 10, 12, 0.9) 80%), url('image/background.png');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            /* Фиксация фона создает эффект параллакса при скролле */
+            background-attachment: fixed;
+        }
+
+        /* Маска для плавного исчезновения нижнего края фото */
+        .portrait-mask {
+            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+
+        /* Тень для золотого текста, чтобы он "светился" на темном фоне */
+        .gold-shadow {
+            text-shadow: 0 0 15px rgba(220, 180, 125, 0.3);
+        }
+
+        /* Плавная прокрутка всей страницы */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-300 font-sans min-h-screen flex flex-col items-center py-12 px-4 selection:bg-gold selection:text-black">
+    <main class="w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+
+        <div class="relative w-full flex justify-center mt-8 mb-10 group">
+            <div class="absolute top-10 w-72 h-72 bg-gold/15 blur-[90px] rounded-full z-0 transition-all duration-700 group-hover:bg-gold/25 group-hover:blur-[100px]"></div>
+
+            <img src="image/photo.png"
+                 alt="Портрет"
+                 class="relative z-10 w-64 md:w-80 object-cover portrait-mask rounded-sm
+                        border border-gold/10 shadow-[0_0_50px_10px_rgba(220,180,125,0.15)]
+                        transition-all duration-500
+                        group-hover:border-gold/30 group-hover:shadow-[0_0_60px_15px_rgba(220,180,125,0.25)]
+                        group-hover:scale-[1.02]">
+        </div>
+
+        <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl text-gold mb-4 font-semibold tracking-[0.05em] px-2 gold-shadow">
+            Антоновский Георгий Иванович
+        </h1>
+        <div class="font-serif text-lg md:text-2xl text-gold tracking-[0.2em] flex items-center space-x-4 mb-6">
+            <span>17.07.2004</span>
+            <span class="w-6 md:w-10 h-[1px] bg-gold opacity-50"></span>
+            <span>17.06.2025</span>
+        </div>
+
+        <div class="text-center text-gray-400 text-xs md:text-sm mb-8 font-sans tracking-[0.15em] leading-relaxed uppercase max-w-2xl px-4">
+            <p class="mb-1">Рядовой гвардии <span class="mx-1 text-gold/40">•</span> Спецназ ГРУ Московского военного округа</p>
+            <p class="text-gray-200 mb-2 italic normal-case tracking-normal text-base md:text-lg font-serif">Позывной «Огуречик»</p>
+            <p class="text-gray-500 text-[10px] md:text-xs">Погиб при исполнении обязанностей военной службы<br>в г. Суджа Курской области</p>
+        </div>
+
+        <div class="flex items-center w-full max-w-xs my-6 opacity-40">
+            <div class="h-[1px] bg-gold flex-1"></div>
+            <div class="w-1.5 h-1.5 bg-gold rotate-45 mx-3"></div>
+            <div class="h-[1px] bg-gold flex-1"></div>
+        </div>
+
+        <p class="font-serif italic text-lg md:text-xl text-gold mb-2">“Егорушка ангел божий”</p>
+
+        <section class="w-full my-8 px-4">
+            <h2 class="font-serif text-2xl md:text-3xl text-gold mb-8 uppercase tracking-widest">История Георгия</h2>
+            <div class="space-y-6 text-sm md:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+                <p class="text-gray-100 font-normal border-l-2 border-gold/30 pl-4 italic">
+                    Георгий героически погиб при исполнении обязанностей военной службы в г. Суджа Курской области.
+                </p>
+                <p>
+                    Рядовой гвардии спецназа ГРУ Московского военного округа, позывной «Огуречик». Он отдал свою молодую жизнь, защищая Родину, и навсегда остался в строю героев.
+                </p>
+                <p>
+                    Светлая память о нем навсегда останется в наших сердцах. Он был добрым и заботливым человеком, который радовался жизни, любил своих друзей и семью. Его жизнь была полной светлых и добрых моментов...
+                </p>
+            </div>
+        </section>
+
+        <section class="w-full my-12 px-4">
+            <h2 class="font-serif text-2xl text-gold mb-8 uppercase tracking-widest">Фотогалерея</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+1" class="w-full h-48 object-cover rounded grayscale hover:grayscale-0 transition-all duration-500 border border-white/5 shadow-xl">
+                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+2" class="w-full h-48 object-cover rounded grayscale hover:grayscale-0 transition-all duration-500 border border-white/5 shadow-xl">
+                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+3" class="w-full h-48 object-cover rounded grayscale hover:grayscale-0 transition-all duration-500 border border-white/5 shadow-xl">
+                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+4" class="w-full h-48 object-cover rounded grayscale hover:grayscale-0 transition-all duration-500 border border-white/5 shadow-xl">
+                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+1" class="w-full h-48 object-cover rounded grayscale hover:grayscale-0 transition-all duration-500 border border-white/5 shadow-xl">
+                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+2" class="w-full h-48 object-cover rounded grayscale hover:grayscale-0 transition-all duration-500 border border-white/5 shadow-xl">
+                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+3" class="w-full h-48 object-cover rounded grayscale hover:grayscale-0 transition-all duration-500 border border-white/5 shadow-xl">
+                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+4" class="w-full h-48 object-cover rounded grayscale hover:grayscale-0 transition-all duration-500 border border-white/5 shadow-xl">
+            </div>
+        </section>
+
+        <section class="w-full max-w-3xl my-10 px-4">
+            <h2 class="font-serif text-3xl text-gold mb-8">Памятный фильм</h2>
+            <div class="group relative aspect-video bg-black rounded-lg border border-white/10 overflow-hidden shadow-2xl">
+                <img src="https://via.placeholder.com/1280x720/0a0a0c/333?text=Памяти+Георгия" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full bg-gold/10 border border-gold/50 text-gold hover:bg-gold hover:text-black transition-all duration-300">
+                        <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-20 mb-10 opacity-50">
+            <h2 class="font-serif text-2xl text-gold mb-4">Светлая память.</h2>
+            <p class="text-[10px] tracking-[0.3em] uppercase">© 2026 Страница памяти</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
