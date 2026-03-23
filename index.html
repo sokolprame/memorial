@@ -113,16 +113,14 @@
         <section class="my-12 w-full px-4">
             <h2 class="text-gold mb-8 font-serif text-2xl uppercase tracking-widest">Фотогалерея</h2>
             <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
-                <img src="image/photo.png"
-                     alt="Описание фото"
-                     class="h-48 w-full cursor-zoom-in rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
-                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+2" class="h-48 w-full rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
-                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+3" class="h-48 w-full rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
-                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+4" class="h-48 w-full rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
-                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+1" class="h-48 w-full rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
-                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+2" class="h-48 w-full rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
-                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+3" class="h-48 w-full rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
-                <img src="https://via.placeholder.com/400x300/1a1a1c/dcb47d?text=Фото+4" class="h-48 w-full rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
+                <img src="image/photo2.jpg" alt="Описание фото" class="h-48 w-full cursor-zoom-in rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
+                <img src="image/photo3.jpg" alt="Описание фото" class="h-48 w-full cursor-zoom-in rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
+                <img src="image/photo4.jpg" alt="Описание фото" class="h-48 w-full cursor-zoom-in rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
+                <img src="image/photo5.jpg" alt="Описание фото" class="h-48 w-full cursor-zoom-in rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
+                <img src="image/photo6.jpg" alt="Описание фото" class="h-48 w-full cursor-zoom-in rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
+                <img src="image/photo7.jpg" alt="Описание фото" class="h-48 w-full cursor-zoom-in rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
+                <img src="image/photo8.jpg" alt="Описание фото" class="h-48 w-full cursor-zoom-in rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
+                <img src="image/photo9.jpg" alt="Описание фото" class="h-48 w-full cursor-zoom-in rounded border border-white/5 object-cover shadow-xl grayscale transition-all duration-500 hover:grayscale-0">
             </div>
         </section>
 
@@ -144,11 +142,12 @@
         </footer>
     </main>
     <script src="script.js"></script>
-    <div id="photo-modal" class="z-[100] fixed inset-0 flex hidden cursor-zoom-out items-center justify-center bg-black/95 p-4 opacity-0 transition-opacity duration-300 md:p-10">
-        <button class="text-gold z-[110] absolute right-5 top-5 text-4xl hover:scale-110">&times;</button>
-
-        <img id="modal-img" src=""
-             class="border-gold/20 max-h-[85vh] max-w-[95vw] scale-95 transform rounded border object-contain shadow-2xl transition-transform duration-300 md:max-h-[90vh] md:max-w-[85vw]">
+    <div id="photo-modal" style="display: none; align-items: center; justify-center: center;" class="z-[9999] fixed inset-0 cursor-zoom-out bg-black/95 p-4">
+        <button class="z-[10000] text-gold absolute right-5 top-5 text-5xl hover:scale-110">&times;</button>
+        <div class="flex h-full w-full items-center justify-center">
+            <img id="modal-img" src=""
+                 class="border-gold/20 max-h-[85vh] max-w-[95vw] scale-95 transform rounded border object-contain opacity-0 shadow-2xl transition-all duration-300 md:max-h-[90vh] md:max-w-[85vw]">
+        </div>
     </div>
 </body>
 </html>
